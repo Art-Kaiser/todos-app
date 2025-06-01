@@ -1,6 +1,7 @@
 {
 	"name": "todos-app",
 	"private": true,
+	"author": "artyon.95@yandex.ru",
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
