@@ -2,7 +2,7 @@
 	height: 100vh;
 
 	.todosList {
-		width: 450px;
+		max-width: 450px;
 		overflow-y: auto;
 	}
 }

@@ -1,15 +1,18 @@
 import { type FC, type KeyboardEvent, type ChangeEvent, useState } from 'react';
 import { Space, Button, Input, Flex, Typography } from 'antd';
 
-import { TODOS_TEXT } from '../../config';
+import { BREAKPOINT_MAX_WIDTH_MOBILE, TODOS_TEXT } from '../../config';
 
 import styles from './TodosHeader.module.css';
+import { useMediaQuery } from '../../lib';
 
 interface ITodosHeader {
 	addTodo: (value: string) => void;
 }
 
 const TodosHeader: FC<ITodosHeader> = ({ addTodo }) => {
+	const isMobile = useMediaQuery(BREAKPOINT_MAX_WIDTH_MOBILE);
+
 	const [value, setValue] = useState<string>('');
 
 	const [isError, setIsError] = useState<boolean>(false);
@@ -74,12 +77,13 @@ const TodosHeader: FC<ITodosHeader> = ({ addTodo }) => {
 					onKeyUp={handlePressEnter}
 					status={isError ? 'error' : undefined}
 					className={styles.input}
+					size={isMobile ? 'small' : 'middle'}
 				/>
 				<Button
 					disabled={!value}
 					onClick={saveTodo}
 					type={'primary'}
-					size={'large'}
+					size={isMobile ? 'middle' : 'large'}
 				>
 					{TODOS_TEXT.saveButton}
 				</Button>

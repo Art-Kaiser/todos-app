@@ -1,9 +1,14 @@
 import { Button, Flex, Segmented, Progress, Typography } from 'antd';
 import { type FC } from 'react';
 
-import { TODOS_TEXT, SEGMENT_OPTIONS } from '../../config';
+import {
+	TODOS_TEXT,
+	SEGMENT_OPTIONS,
+	BREAKPOINT_MAX_WIDTH_MOBILE,
+} from '../../config';
 
 import type { SegmentType } from '../../config';
+import { useMediaQuery } from '../../lib';
 
 import styles from './TodosFooter.module.css';
 
@@ -20,13 +25,21 @@ const TodosFooter: FC<ITodosFooter> = ({
 	changeView,
 	percentDone,
 }) => {
+	const isMobile = useMediaQuery(BREAKPOINT_MAX_WIDTH_MOBILE);
+
 	return (
 		<>
-			<Flex justify={'space-between'} align={'center'} gap={'small'}>
+			<Flex
+				justify={'space-between'}
+				vertical={isMobile}
+				align={!isMobile ? 'center' : undefined}
+				gap={'small'}
+			>
 				<Typography.Text type={'secondary'} className={styles.text}>
 					{countNotCompleted ?? 0} {TODOS_TEXT.itemsLeft}
 				</Typography.Text>
 				<Segmented<SegmentType>
+					vertical={isMobile}
 					className={styles.segments}
 					options={SEGMENT_OPTIONS}
 					onChange={changeView}

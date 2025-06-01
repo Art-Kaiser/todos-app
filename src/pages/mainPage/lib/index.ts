@@ -3,6 +3,7 @@ import { getCountActiveItems } from './getCountActiveItems.ts';
 import { createTodoItem } from './createTodoItem.ts';
 import { getPercentDone } from './getPercentDone.ts';
 import { getTodosByView } from './getTodosByView.ts';
+import { useMediaQuery } from './useMediaQuery.tsx';
 
 export {
 	generateTodoId,
@@ -10,4 +11,5 @@ export {
 	createTodoItem,
 	getPercentDone,
 	getTodosByView,
+	useMediaQuery,
 };

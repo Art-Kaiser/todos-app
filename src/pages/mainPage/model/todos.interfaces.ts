@@ -1,5 +1,5 @@
 import { ACTIONS } from '../config';
-import type { TypeByValue } from '../../../shared';
+import type { TypeByValue } from '../../../shared/utility-types';
 
 export interface IActions {
 	type: TypeByValue<typeof ACTIONS>;

@@ -1,4 +1,4 @@
-import type { TypeByValue } from '../../../../shared';
+import type { TypeByValue } from '../../../../shared/utility-types';
 
 export const SEGMENTS = {
 	ALL: 'all',

@@ -1,7 +1,8 @@
-import { SEGMENTS, type SegmentType } from './segments/constants.ts';
-import { SEGMENT_OPTIONS } from './segments/options.ts';
-import { ACTIONS } from './actions.ts';
+export { SEGMENTS, type SegmentType } from './segments/constants.ts';
+export { SEGMENT_OPTIONS } from './segments/options.ts';
+export { ACTIONS } from './actions.ts';
+export { BREAKPOINT_MAX_WIDTH_MOBILE } from './breakpoint.ts';
 
 import TODOS_TEXT from './todosText.json';
 
-export { SEGMENTS, SEGMENT_OPTIONS, TODOS_TEXT, ACTIONS, type SegmentType };
+export { TODOS_TEXT };
