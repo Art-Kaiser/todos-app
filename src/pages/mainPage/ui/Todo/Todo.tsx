@@ -35,6 +35,7 @@ const Todo: FC<ITodo> = ({ id, title, completed, removeTodo, onClick }) => {
 					icon={getIconForCompleted(completed)}
 				/>
 				<Typography.Text
+					onClick={() => onClick(id)}
 					className={cn(styles.todoText, {
 						[styles.todoCompleted]: completed,
 					})}
