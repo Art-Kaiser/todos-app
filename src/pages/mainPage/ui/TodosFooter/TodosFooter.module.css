@@ -1,0 +1,10 @@
+.text {
+	font-size: 12px;
+	user-select: none;
+}
+
+.segments {
+	font-size: 12px;
+	user-select: none;
+	text-transform: capitalize;
+}

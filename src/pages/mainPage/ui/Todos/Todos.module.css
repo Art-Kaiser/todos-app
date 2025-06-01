@@ -1,0 +1,8 @@
+.container {
+	height: 100vh;
+
+	.todosList {
+		width: 450px;
+		overflow-y: auto;
+	}
+}

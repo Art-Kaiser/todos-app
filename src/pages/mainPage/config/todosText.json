@@ -1,0 +1,10 @@
+{
+	"saveButton": "Сохранить",
+	"whatNeedsDone": "Что нужно сделать?",
+	"all": "Все",
+	"active": "Активные",
+	"completed": "Выполненые",
+	"clearCompleted": "Очистить выполненые",
+	"itemsLeft": "Осталось",
+	"errorEmpty": "Поле не заполнено!"
+}
