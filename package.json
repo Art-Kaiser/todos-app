@@ -10,12 +10,6 @@
 		"preview": "vite preview",
 		"prettier-format": "prettier --config .prettierrc '**/*.{json,js,jsx,ts,tsx,css,scss,md}' --write",
 		"test": "vitest run",
-		"husky": {
-			"hooks": {
-				"pre-commit": "prettier-format",
-				"pre-push": "test"
-			}
-		},
 		"prepare": "husky"
 	},
 	"dependencies": {
