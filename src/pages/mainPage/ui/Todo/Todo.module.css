@@ -12,4 +12,12 @@
 		color: #aeaeae;
 		text-decoration: line-through;
 	}
+
+	.checkIcon {
+		color: #1677FFFF;
+	}
+
+	.closeIcon {
+		color: #E10F0FFF;
+	}
 }

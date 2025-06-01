@@ -21,7 +21,7 @@ const Todo: FC<ITodo> = ({ id, title, completed, removeTodo, onClick }) => {
 	 * */
 	const getIconForCompleted = (isCompleted: boolean): JSX.Element | null =>
 		isCompleted ? (
-			<CheckOutlined style={{ color: 'rgb(22, 119, 255)' }} />
+			<CheckOutlined className={styles.checkIcon} />
 		) : null;
 
 	return (
@@ -48,7 +48,7 @@ const Todo: FC<ITodo> = ({ id, title, completed, removeTodo, onClick }) => {
 				<Button
 					size={'small'}
 					onClick={() => removeTodo(id)}
-					icon={<CloseOutlined style={{ color: 'rgb(225,15,15)' }} />}
+					icon={<CloseOutlined className={styles.closeIcon}  />}
 				/>
 			</Flex>
 		</Flex>
